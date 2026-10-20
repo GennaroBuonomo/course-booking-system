@@ -1,8 +1,8 @@
-import { CurrencyPipe, DatePipe, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { CourseCard } from '../course-card/course-card';
 
 @Component({
-  imports: [NgStyle, DatePipe, CurrencyPipe],
+  imports: [CourseCard],
   selector: 'app-courses-list',
   styleUrl: './courses-list.css',
   templateUrl: './courses-list.html',
@@ -19,7 +19,5 @@ export class CoursesList implements OnInit{
     console.log("Lista corsi Inizializzato")
   }
 
-  viewDetails(title: string): void{
-    alert(`Vedi i dettagli per ${title}`)
-  }
+
 }
