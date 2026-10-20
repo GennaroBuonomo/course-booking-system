@@ -6,7 +6,7 @@
   <p>{{ courses[0].date }}</p>
   <p [hidden]="!courses[0].soldOut">Sold Out</p>
   <img [src]="courses[0].img" [alt]="courses[0].title" width="100">
-  <button>Vedi dettagli</button>
+  <button (click)="viewDetails(courses[0].title)">Vedi dettagli</button>
 </div>
 
 <div class="elemento-corso">
@@ -16,7 +16,7 @@
   <p>{{ courses[1].date }}</p>
   <p [hidden]="!courses[1].soldOut">Sold Out</p>
   <img [src]="courses[1].img" [alt]="courses[1].title" width="100">
-  <button>Vedi dettagli</button>
+  <button (click)="viewDetails(courses[1].title)">Vedi dettagli</button>
 </div>
 
 <div class="elemento-corso">
@@ -26,5 +26,5 @@
   <p>{{ courses[2].date }}</p>
   <p [hidden]="!courses[2].soldOut">Sold Out</p>
   <img [src]="courses[2].img" [alt]="courses[2].title" width="100">
-  <button>Vedi dettagli</button>
+  <button (click)="viewDetails(courses[2].title)">Vedi dettagli</button>
 </div>
