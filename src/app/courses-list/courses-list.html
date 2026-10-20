@@ -1,30 +1,15 @@
 <h2>{{ title }}</h2>
-<div class="elemento-corso">
-  <h3>{{ courses[0].title }}</h3>
-  <p>{{ courses[0].description }}</p>
-  <p>{{ courses[0].price }}</p>
-  <p>{{ courses[0].date }}</p>
-  <p [hidden]="!courses[0].soldOut">Sold Out</p>
-  <img  [src]="courses[0].img" [alt]="courses[0].title" width="100">
-  <button (click)="viewDetails(courses[0].title)">Vedi dettagli</button>
-</div>
-
-<div class="elemento-corso">
-  <h3>{{ courses[1].title }}</h3>
-  <p>{{ courses[1].description }}</p>
-  <p>{{ courses[1].price }}</p>
-  <p>{{ courses[1].date }}</p>
-  <p [hidden]="!courses[1].soldOut">Sold Out</p>
-  <img [src]="courses[1].img" [alt]="courses[1].title" width="100">
-  <button (click)="viewDetails(courses[1].title)">Vedi dettagli</button>
-</div>
-
-<div class="elemento-corso">
-  <h3>{{ courses[2].title }}</h3>
-  <p>{{ courses[2].description }}</p>
-  <p>{{ courses[2].price }}</p>
-  <p>{{ courses[2].date }}</p>
-  <p [hidden]="!courses[2].soldOut">Sold Out</p>
-  <img  [src]="courses[2].img" [alt]="courses[2].title" width="100">
-  <button (click)="viewDetails(courses[2].title)">Vedi dettagli</button>
-</div>
+@for(course of courses; track course.id) {
+  <div class="elemento-corso">
+    <h3>{{ course.title }}</h3>
+    <p>{{ course.description }}</p>
+    <p>{{ course.price }}</p>
+    <p>{{ course.date }}</p>
+    <p [hidden]="!course.soldOut">Sold Out</p>
+    <img  [src]="course.img" [alt]="course.title" width="100">
+    @if (course.price < 50){
+      <div class="offerta-speciale">Offerta-speciale</div>
+    }
+    <button (click)="viewDetails(course.title)">Vedi dettagli</button>
+  </div>
+}

@@ -12,7 +12,7 @@ export class CoursesList implements OnInit{
   courses = [
     {id: 1, title: 'Introduzzione ad Angular', description: 'Impara Angular in questo corso', price: '30', date:'20-10-2026', soldOut: false, img: 'Angular-logo.png'},
     {id: 2, title: 'Angular avanzato', description: 'Impara nuove skill di Angular', price: '50', date:'20-10-2026', soldOut: true, img: 'Angular-logo.png'},
-    {id: 3, title: ' Angular supremo', description: 'Impara Angular supremo', price: '100', date:'20-10-2026', soldOut: false, img: 'Angular-logo.png'},
+    {id: 3, title: ' RxJS Fondamentali', description: 'Impara RxJS', price: '45', date:'20-10-2026', soldOut: false, img: 'RxJS-logo.png'},
   ];
 
   ngOnInit(): void{
