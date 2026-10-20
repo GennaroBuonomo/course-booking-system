@@ -1,24 +1,27 @@
-<h2> Corsi Disponibili </h2>
+<h2>{{ title }}</h2>
 <div class="elemento-corso">
-  <h3> Introduzzione ad Angular </h3>
-  <p>Impara Angular in questo corso</p>
-  <p>100</p>
-  <p>20-10-2026</p>
+  <h3>{{ courses[0].title }}</h3>
+  <p>{{ courses[0].description }}</p>
+  <p>{{ courses[0].price }}</p>
+  <p>{{ courses[0].date }}</p>
+  <p [hidden]="!courses[0].soldOut">Sold Out</p>
   <button>Vedi dettagli</button>
 </div>
 
 <div class="elemento-corso">
-  <h3> Angular avanzato </h3>
-  <p>Impara nuove skill di Angular</p>
-  <p>100</p>
-  <p>20-10-2026</p>
+  <h3>{{ courses[1].title }}</h3>
+  <p>{{ courses[1].description }}</p>
+  <p>{{ courses[1].price }}</p>
+  <p>{{ courses[1].date }}</p>
+  <p [hidden]="!courses[1].soldOut">Sold Out</p>
   <button>Vedi dettagli</button>
 </div>
 
 <div class="elemento-corso">
-  <h3> Angular supremo</h3>
-  <p>Impara Angular supremo</p>
-  <p>100</p>
-  <p>20-10-2026</p>
+  <h3>{{ courses[2].title }}</h3>
+  <p>{{ courses[2].description }}</p>
+  <p>{{ courses[2].price }}</p>
+  <p>{{ courses[2].date }}</p>
+  <p [hidden]="!courses[2].soldOut">Sold Out</p>
   <button>Vedi dettagli</button>
 </div>
