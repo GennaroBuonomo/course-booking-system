@@ -20,7 +20,7 @@ export class CoursesList implements OnInit{
   }
 
   onCourseBooked(course: any): void {
-    console.log('Un genitore ha sentito parlare della prenotazione')
+    console.log('Un genitore ha sentito parlare della prenotazione', course.title)
   }
 
 

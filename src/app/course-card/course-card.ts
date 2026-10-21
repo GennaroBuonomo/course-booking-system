@@ -1,5 +1,5 @@
 import { DatePipe, CurrencyPipe } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   imports: [DatePipe, CurrencyPipe],
@@ -9,8 +9,9 @@ import { Component, Input } from '@angular/core';
 })
 export class CourseCard {
    @Input() course: any;
+   @Output() courseBooked = new EventEmitter<any>();
 
-  viewDetails(title: string): void{
-    alert(`Vedi i dettagli per ${title}`)
+  onCourseBooked(): void {
+    this.courseBooked.emit(this.course);
   }
 }
