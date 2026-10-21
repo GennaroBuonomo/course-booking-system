@@ -9,6 +9,7 @@ import { CourseCard } from '../course-card/course-card';
 })
 export class CoursesList implements OnInit{
   title: string = "Corsi Disponibili"
+  wishlist: any[] = []
   courses = [
     { id: 1, title: 'Introduzione ad Angular', description: 'Impara Angular in questo corso', price: 30, date: '2026-10-20', soldOut: false, img: 'Angular-logo.png', onSale: false },
     { id: 2, title: 'Angular avanzato', description: 'Impara nuove skill di Angular', price: 50, date: '2026-10-20', soldOut: true, img: 'Angular-logo.png', onSale: true },
@@ -21,6 +22,11 @@ export class CoursesList implements OnInit{
 
   onCourseBooked(course: any): void {
     console.log('Un genitore ha sentito parlare della prenotazione', course.title)
+  }
+
+  onToWhishlist(course: any): void {
+    console.log('Aggiunto ai preferiti', course.title);
+    this.wishlist.push(course)
   }
 
 
