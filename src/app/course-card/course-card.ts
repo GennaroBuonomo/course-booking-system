@@ -9,7 +9,7 @@ import { Course } from '../models/course.model';
   templateUrl: './course-card.html',
 })
 export class CourseCard {
-   @Input() course?: Course;
+   @Input() course!: Course;
    @Output() courseBooked = new EventEmitter<any>();
    @Output() wishlistAdded = new EventEmitter<any>()
 
