@@ -19,8 +19,14 @@ export class CoursesList implements OnInit{
   }
 
   ngOnInit(): void{
-    this.courses = this.courseService.getCourses();
-    console.log("Lista corsi Inizializzato")
+    this.courseService.getCourses().subscribe({
+      next: (data: Course[]) => {
+        this.courses = data
+      },
+      error: (err) => {
+        console.error('Errore corso', err)
+      }
+    });
   }
 
   onCourseBooked(course: Course): void {
